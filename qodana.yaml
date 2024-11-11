@@ -1,0 +1,120 @@
+#-------------------------------------------------------------------------------#
+#               Qodana analysis is configured by qodana.yaml file               #
+#             https://www.jetbrains.com/help/qodana/qodana-yaml.html            #
+#-------------------------------------------------------------------------------#
+version: "1.0"
+#Specify IDE code to run analysis without container (Applied in CI/CD pipeline)
+ide: QDNET
+#Specify inspection profile for code analysis
+profile:
+  name: qodana.starter
+include:
+  - name: PyReturnFromInitInspection
+  - name: PyByteLiteralInspection
+  - name: PyProtectedMemberInspection
+  - name: PyAttributeOutsideInitInspection
+  - name: PyInterpreterInspection
+  - name: PyNoneFunctionAssignmentInspection
+  - name: PyAugmentAssignmentInspection
+  - name: PyAugmentAssignmentInspection
+  - name: PyAssignmentToLoopOrWithParameterInspection
+  - name: PyCallingNonCallableInspection
+  - name: PyClassHasNoInitInspection
+  - name: PyAbstractClassInspection
+  - name: PyDecoratorInspection
+  - name: PyClassicStyleClassInspection
+  - name: PyCompatibilityInspection
+  - name: PyDeprecationInspection
+  - name: PyDictDuplicateKeysInspection
+  - name: PyDictCreationInspection
+  - name: PyStringFormatInspection
+  - name: PyExceptionInheritInspection
+  - name: PyNonAsciiCharInspection
+  - name: PyMethodFirstArgAssignmentInspection
+  - name: PyMethodFirstArgAssignmentInspection
+  - name: PyTestUnpassedFixtureInspection
+  - name: PySetFunctionToLiteralInspection
+  - name: PyGlobalUndefinedInspection
+  - name: PyMethodParametersInspection
+  - name: PyFromFutureImportInspection
+  - name: PyPropertyAccessInspection
+  - name: PyInitNewSignatureInspection
+  - name: PyStubPackagesCompatibilityInspection
+  - name: PyInconsistentIndentationInspection
+  - name: PyTestParametrizedInspection
+  - name: PyArgumentListInspection
+  - name: CommandLineInspection
+  - name: CommandLineInspection
+  - name: PyIncorrectDocstringInspection
+  - name: PyPropertyDefinitionInspection
+  - name: PyTypeCheckerInspection
+  - name: PyDataclassInspection
+  - name: PyExceptClausesOrderInspection
+  - name: PySuperArgumentsInspection
+  - name: PyComparisonWithNoneInspection
+  - name: PyUnusedLocalInspection
+  - name: PyPackageRequirementsInspection
+  - name: PyUnresolvedReferencesInspection
+  - name: PyUnreachableCodeInspection
+  - name: PyUnnecessaryBackslashInspection
+  - name: PyBroadExceptionInspection
+  - name: PyUnboundLocalVariableInspection
+  - name: PyDocstringTypesInspection
+  - name: PyTupleItemAssignmentInspection
+  - name: PyTupleAssignmentBalanceInspection
+  - name: PyChainedComparisonsInspection
+  - name: PyArgumentEqualDefaultInspection
+  - name: PyDefaultArgumentInspection
+  - name: PyRelativeImportInspection
+  - name: PyStubPackagesAdvertiser
+  - name: PyStatementEffectInspection
+  - name: PySingleQuotedDocstringInspection
+  - name: PyShadowingNamesInspection
+  - name: PyShadowingBuiltinsInspection
+  - name: PyRedundantParenthesesInspection
+  - name: PySimplifyBooleanCheckInspection
+  - name: PyRedeclarationInspection
+  - name: PyTrailingSemicolonInspection
+  - name: PyNestedDecoratorsInspection
+  - name: PoetryPackageVersionsInspection
+  - name: PyPep8NamingInspection
+  - name: PyPep8Inspection
+  - name: PyPep8Inspection
+  - name: PyOverloadsInspection
+  - name: PyOldStyleClassesInspection
+  - name: PyListCreationInspection
+  - name: PyMandatoryEncodingInspection
+  - name: PyMissingTypeHintsInspection
+  - name: PyMissingOrEmptyDocstringInspection
+  - name: PyAsyncCallInspection
+  - name: PyMissingConstructorInspection
+  - name: PyMethodOverridingInspection
+  - name: PyPandasSeriesToListInspection
+  - name: PyPandasSeriesToListInspection
+  - name: PyMethodMayBeStaticInspection
+  - name: PyFinalInspection
+  - name: PyDunderSlotsInspection
+  - name: PyOverridesInspection
+  - name: PyNewStyleGenericSyntaxInspection
+  - name: PyNewStyleGenericSyntaxInspection
+  - name: PyClassVarInspection
+  - name: PyClassVarInspection
+  - name: PyTypedDictInspection
+  - name: PyTypeHintsInspection
+  - name: PyProtocolInspection
+  - name: PyNamedTupleInspection
+  - name: RegExpRedundantEscape
+
+#Enable inspections
+#include:
+#  - name: <SomeEnabledInspectionId>
+#Disable inspections
+#exclude:
+#  - name: <SomeDisabledInspectionId>
+#    paths:
+#      - <path/where/not/run/inspection>
+#Execute shell command before Qodana execution (Applied in CI/CD pipeline)
+#bootstrap: sh ./prepare-qodana.sh
+#Install IDE plugins before Qodana execution (Applied in CI/CD pipeline)
+#plugins:
+#  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
